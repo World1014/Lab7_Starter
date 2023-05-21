@@ -126,6 +126,7 @@ async function getRecipes() {
         if(recArr.length == RECIPE_URLS.length){
           saveRecipesToStorage(recArr);
           resolve(recArr);
+          addRecipesToDocument(recArr);
         }
       } catch(e) {
   // A10. TODO - Log any errors from catch using console.error
